@@ -1,0 +1,53 @@
+<!--&lt;!&ndash;<!DOCTYPE html>&ndash;&gt;-->
+<!--&lt;!&ndash;<html xmlns:th="http://www.thymeleaf.org">&ndash;&gt;-->
+<!--&lt;!&ndash;<head>&ndash;&gt;-->
+<!--&lt;!&ndash;    <title>Accueil</title>&ndash;&gt;-->
+<!--&lt;!&ndash;</head>&ndash;&gt;-->
+<!--&lt;!&ndash;<body>&ndash;&gt;-->
+<!--&lt;!&ndash;<h1 th:text="${message}">Message par défaut</h1>&ndash;&gt;-->
+<!--&lt;!&ndash;<form action="/ticket" method="post">&ndash;&gt;-->
+<!--&lt;!&ndash;    <label for="location">Choisissez votre localisation :</label>&ndash;&gt;-->
+<!--&lt;!&ndash;    <select id="location" name="location">&ndash;&gt;-->
+<!--&lt;!&ndash;        <option value="Dakar">Dakar</option>&ndash;&gt;-->
+<!--&lt;!&ndash;        <option value="Thies">Thies</option>&ndash;&gt;-->
+<!--&lt;!&ndash;        <option value="Ziguinchor">Ziguinchor</option>&ndash;&gt;-->
+<!--&lt;!&ndash;    </select>&ndash;&gt;-->
+<!--&lt;!&ndash;    <button type="submit">Obtenir un Ticket</button>&ndash;&gt;-->
+<!--&lt;!&ndash;</form>&ndash;&gt;-->
+<!--&lt;!&ndash;</body>&ndash;&gt;-->
+<!--&lt;!&ndash;</html>&ndash;&gt;-->
+
+<!--<!DOCTYPE html>-->
+<!--<html xmlns:th="http://www.thymeleaf.org">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Gestion des Services</title>-->
+<!--    <link rel="stylesheet" href="/Style.css">-->
+<!--</head>-->
+<!--<body>-->
+<!--<div class="container">-->
+<!--    <h1>Bienvenue dans l'application de gestion des services</h1>-->
+
+<!--    <form action="/submit" method="post">-->
+<!--        <div class="form-group">-->
+<!--            <label for="service">Choisissez un service :</label>-->
+<!--            <select id="service" name="service" required>-->
+<!--                <option value="" disabled selected>&#45;&#45; Sélectionner un service &#45;&#45;</option>-->
+<!--                <option th:each="service : ${services}" th:value="${service}" th:text="${service}"></option>-->
+<!--            </select>-->
+<!--        </div>-->
+
+<!--        <div class="form-group">-->
+<!--            <label for="location">Choisissez une localisation :</label>-->
+<!--            <select id="location" name="location" required>-->
+<!--                <option value="" disabled selected>&#45;&#45; Sélectionner une localisation &#45;&#45;</option>-->
+<!--                <option th:each="location : ${localisations}" th:value="${location}" th:text="${location}"></option>-->
+<!--            </select>-->
+<!--        </div>-->
+
+<!--        <button type="submit" class="btn">Valider</button>-->
+<!--    </form>-->
+<!--</div>-->
+<!--</body>-->
+<!--</html>-->
+
