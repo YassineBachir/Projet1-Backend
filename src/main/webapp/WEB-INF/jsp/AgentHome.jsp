@@ -8,14 +8,17 @@
 </head>
 <body>
 <div class="container">
-    <h1>Interface Agent</h1>
+    <h1>Bienvenue dans votre tableau de bord!</h1>
     <p><strong>Numéro en cours de traitement :</strong> ${currentProcessingTicket}</p>
-    <form action="/agent/next" method="post">
+    <form action="/agent/next" method="post" style="display: inline-block; margin-right: 10px;">
         <button class="btn">Client suivant</button>
     </form>
-    <form action="/agent/previous" method="post">
+
+    <form action="/agent/previous" method="post" style="display: inline-block;">
         <button class="btn">Client précédent</button>
     </form>
+
+
 </div>
 </body>
 </html>

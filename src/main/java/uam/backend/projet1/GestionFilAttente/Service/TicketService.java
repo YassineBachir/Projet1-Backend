@@ -33,4 +33,14 @@ public class TicketService {
     public int getCurrentProcessingTicket() {
         return currentProcessingTicket.get();
     }
+
+    public int processNextTicket() {
+        // Incrémente le ticket en cours de traitement
+        return currentProcessingTicket.incrementAndGet();
+    }
+
+    public int processPreviousTicket() {
+        // Décrémente le ticket en cours de traitement, mais ne descend pas en dessous de 1
+        return Math.max(1, currentProcessingTicket.decrementAndGet());
+    }
 }
