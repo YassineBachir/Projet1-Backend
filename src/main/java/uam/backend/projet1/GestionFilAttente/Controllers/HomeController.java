@@ -23,12 +23,12 @@ public class HomeController {
 
     @GetMapping("/")
     public String getHome(Model model) {
-        // Liste des services
+
         List<String> services = Arrays.asList("Seneau", "Orange", "Senelec", "Bank");
         model.addAttribute("services", services);
 
-        // Liste des localisations
-        List<String> localisations = Arrays.asList("Dakar", "Thiès", "Saint-Louis", "Kaolack", "Ziguinchor");
+
+        List<String> localisations = Arrays.asList("Dakar Ville", "Cité Keur Gorgui", "Parcelle", "Guédiawaye", "Yeumbeul", "Keur Massar");
         model.addAttribute("localisations", localisations);
 
         return "Home";

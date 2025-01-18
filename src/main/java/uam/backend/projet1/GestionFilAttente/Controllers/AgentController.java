@@ -13,14 +13,14 @@ import uam.backend.projet1.GestionFilAttente.Service.TicketService;
 @Controller
 @RequestMapping("/agent")
 public class AgentController {
-//
+
     @Autowired
     private TicketService ticketService;
 
     @GetMapping
     public String getAgentDashboard(Model model) {
         model.addAttribute("currentProcessingTicket", ticketService.getCurrentProcessingTicket());
-        return "AgentHome"; // Assurez-vous que cette vue existe
+        return "AgentHome";
     }
 
 

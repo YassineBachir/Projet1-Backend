@@ -1,12 +1,12 @@
 package uam.backend.projet1.GestionFilAttente.Model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 public class Service {
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,7 +17,14 @@ public class Service {
     public Long getId() {
         return id;
     }
+    @ManyToMany
+    @JoinTable(
+            name = "service_location",
+            joinColumns = @JoinColumn(name = "service_id"),
+            inverseJoinColumns = @JoinColumn(name = "location_id")
+    )
 
+    private List<Location> locations;
     public void setId(Long id) {
         this.id = id;
     }
@@ -28,5 +35,12 @@ public class Service {
 
     public void setName(String name) {
         this.name = name;
+    }
+    public List<Location> getLocations() {
+        return locations;
+    }
+
+    public void setLocations(List<Location> locations) {
+        this.locations = locations;
     }
 }

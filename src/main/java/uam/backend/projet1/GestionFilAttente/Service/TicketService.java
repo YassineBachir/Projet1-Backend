@@ -11,6 +11,8 @@ public class TicketService {
     private final AtomicInteger ticketCounter = new AtomicInteger(0);
     private static final AtomicInteger currentProcessingTicket = new AtomicInteger(1);
 
+    //Génère un nouveau ticket avec un numéro unique, un service, et une localisation
+
     public Ticket generateTicket(String service, String location) {
         int ticketNumber = ticketCounter.incrementAndGet(); // Incrémente et obtient le numéro du ticket
 
@@ -29,7 +31,7 @@ public class TicketService {
     public int getPeopleAhead(int ticketNumber) {
         return Math.max(0, getPositionInQueue(ticketNumber));
     }
-
+//Math.max(0): Si le ticket demandé a déjà été traité ou est le ticket actuel, la méthode retourne 0 au lieu d'une valeur négative.
     public int getCurrentProcessingTicket() {
         return currentProcessingTicket.get();
     }

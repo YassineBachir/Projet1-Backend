@@ -30,3 +30,5 @@ public class ServiceController {
     }
 
 }
+
+//http://localhost:8080/api/services/search?name=SenEau
